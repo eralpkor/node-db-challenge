@@ -1,12 +1,7 @@
-const express = require('express');
 
+const router = require('express').Router();
 const Projects = require('./project-model');
 
-const router = express.Router();
-
-
-
-// MVP Endpoints
 
 // GET /api/projects
 router.get('/', (req, res) => {
@@ -14,12 +9,8 @@ router.get('/', (req, res) => {
     .then(projects => {
       console.log(projects);
       const updatedProjects = projects.map(project => {
-        !!project.completed ? project.completed = true : project.completed = false;
-        // if (project.completed === 0) {
-        //   project.completed = false;
-        // } else if (project.completed === 1) {
-        //   project.completed = true;
-        // }
+        project.completed = project.completed ? true : false;
+     
         return project;
       });
       res.status(200).json(updatedProjects);

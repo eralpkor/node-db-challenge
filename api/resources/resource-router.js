@@ -1,8 +1,7 @@
 
 
-const express = require('express');
+const router = require('express').Router();
 const Resources = require('./resources-model.js');
-const router = express.Router();
 
 
 // GET /api/resources 
@@ -23,7 +22,7 @@ router.post('/', (req, res) => {
     })
     .catch(err => {
       console.log(err);
-      res.status(500).json({ message: 'Failed to create new resource' });
+      res.status(500).json({ message: 'Failed to create new one...' });
     });
 });
 
