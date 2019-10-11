@@ -40,11 +40,29 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+* Relational database is a database that stores data in a table form, containing columns and rows.
+
+* SQL = Structured Query Language, is the standard language for dealing with Relational Databases.
+
 - [ ] Why do tables need a `primary key`?
+
+* Table needs a primary key because it ensures row-level accessibility. 
+*  primary key value, which lets you query each table row individually and 
+* modify each row without altering other rows in the same table.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+* Foreign Key
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+* Let's say we have database  to keep track of customers, orders, and products.
+* Now, we need to create a relationship between orders and products
+* we examine and make conclusions on the relation of each table to the other or of relations among entities because this is how we refer to tables in database.
+* From the orders point of view, we conclude that each order in the orders table can contain more than one product. It is only logical that a customer can order multiple products in one order.
+* From the products point of view, we conclude that each product can participate in more than one order. It is logical that we can sell the same product to multiple customers through their orders.
+* When this is the case, we need to establish a many-to-many relationship between Orders and Products.
+
 
 ## Minimum Viable Product
 
